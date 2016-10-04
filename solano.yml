@@ -1,0 +1,17 @@
+timeout: 7200
+python:
+  python_version:  2.7
+submodules: true
+environment:
+  'TESTMODE': fast
+  'REFGUIDE_CHECK': 1
+  'COVERAGE': ''
+  'NPY_RELAXED_STRIDES_CHECKING': 1
+  'NUMPYSPEC': '--upgrade git+git://github.com/numpy/numpy.git@v1.10.4'
+#   'CPATH': '~/.local/include'
+#   'LIBRARY_PATH': '~/.local/lib'
+#   'LD_LIBRARY_PATH': '~/.local/lib'
+tests:
+   - ./solano_run_tests.sh
+hooks:
+  pre: ./solano_setup.sh
