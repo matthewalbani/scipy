@@ -3,6 +3,7 @@ python:
   python_version:  2.7
 submodules: true
 environment:
+  'TZ' : Etc/UTC
   'TESTMODE': fast
   'REFGUIDE_CHECK': 1
   'COVERAGE': ''
